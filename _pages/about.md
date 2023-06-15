@@ -36,5 +36,5 @@ I invite you to join me on this journey of exploration and growth. Together, we 
 
 Thank you for visiting my website, and I hope you find inspiration and value in the content I share.
 
-[Follow me on Twitter](https://twitter.com/yourtwitterhandle) | [Connect on LinkedIn](https://linkedin.com/in/yourprofile)
+[Connect on LinkedIn](https://linkedin.com/in/charlespert)
 
