@@ -1,9 +1,8 @@
 ---
 title: Home
 permalink: /
+layout: single
 ---
-
-{% include feature_row %}
 
 # ChatGPT template. 
 
