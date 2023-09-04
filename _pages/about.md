@@ -3,39 +3,32 @@ title: About
 permalink: /about/
 ---
 
-# ChatGPT template.
+# Qualifications
+- First Class (Hons) BSc in Maths and Physics within the Natural Sciences programme @ Durham University 2018-2021
+- Distinction MSc in Scientific Computing and Data Analysis @ Durham University 2021-2022 (Awarded certificate of excellence for highest overall average)
 
-# About Me
+# Teaching
 
-Hello! I'm [Your Name], and I'm delighted to have you here. Allow me to tell you a bit about myself, my background, and my passions.
+2022/23
+- GTA for Reinforcement Learning COMP70028
+- Tutor for Calculus & Linear Algebra (COMP40016/COMP40017)
+- Course Support Leader for Symbolic Reasoning (COMP50009)
+- Course Support Lead for Computational Techniques (COMP50011)
 
-## Background
+2023/24
+- Tutor for Calculus & Linear Algebra (COMP40016/COMP40017)
+- Lecturer for Symbolic Reasoning (COMP50009)
 
-I have always been fascinated by [your interests or areas of expertise]. From a young age, I found joy in exploring and learning about [specific topic]. Over the years, my curiosity has led me to delve deeper into this field, gaining knowledge and expertise along the way.
+- 
+## Research Interests
 
-## Journey
+My research interests include:
 
-My journey in [your chosen field] has been an exciting and fulfilling one. I've had the privilege of [mention notable experiences, projects, or achievements]. These experiences have shaped me both personally and professionally, and they continue to fuel my desire to grow and contribute to the field.
+- automata theory
+- linear temporal logic
+- verification and reasoning of (non-terminating) systems
 
-## Purpose
-
-The purpose of this website is to share my passion and knowledge with others who have an interest in [your chosen field]. I believe that by sharing our experiences and insights, we can inspire and empower each other to reach new heights.
-
-## Topics of Interest
-
-Some of the topics I'm particularly passionate about include:
-
-- [Interest 1]
-- [Interest 2]
-- [Interest 3]
-
-I aim to cover these topics extensively through my blog posts, articles, and projects, providing valuable information and perspectives to my readers.
-
-## Join Me on this Journey
-
-I invite you to join me on this journey of exploration and growth. Together, we can dive deep into the world of [your chosen field] and discover its wonders. Feel free to explore my blog, projects, and other sections of this website. If you have any questions, suggestions, or just want to connect, don't hesitate to reach out.
-
-Thank you for visiting my website, and I hope you find inspiration and value in the content I share.
 
 [Connect on LinkedIn](https://linkedin.com/in/charlespert)
+Email: charles.pert [@] imperial ac uk
 
