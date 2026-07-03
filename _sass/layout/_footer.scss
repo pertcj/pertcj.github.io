@@ -7,19 +7,14 @@
   background-color: var(--global-footer-bg-color);
   color: var(--global-text-color-light);
 
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 3em;
   width: 100%;
   clear: both;
 
-  /* keep footer in normal document flow so custom widgets do not overlap content */
-  height: auto;
-
-  /* keep the footer on the bottom of the page */
+  /* keep the footer pinned to the bottom of the viewport at all times */
   position: fixed;
   bottom: 0;
+  left: 0;
+  z-index: 15;
 
   -webkit-animation: intro 0.3s both;
           animation: intro 0.3s both;
@@ -31,9 +26,9 @@
     @include clearfix;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1em;
     max-width: 100%;
-    padding: 0 1em 1em;
+    padding: 0.75em 1em;
+    text-align: center;
 
     @include breakpoint($x-large) {
       max-width: $x-large;
@@ -54,14 +49,6 @@
   .far,
   .fal {
     color: var(--global-text-color-light);
-  }
-}
-
-@media screen and (max-width: 768px) {
-  /* don't pin the footer on mobile devices */
-  .page__footer {
-    position: relative;
-    bottom: auto;
   }
 }
 

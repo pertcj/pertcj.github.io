@@ -1,36 +1,36 @@
 ---
 layout: archive
-title: "Publications"
+title: "publications"
 permalink: /publications/
 author_profile: true
 ---
+
+{% include base_path %}
 
 {% if site.author.googlescholar %}
   <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
 
-{% include base_path %}
-
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
+<ul class="pub-list">
+  {% assign pubs = site.publications | sort: "order" %}
+  {% for post in pubs %}
+    <li class="pub-list__item">
+      <p class="pub-list__title">{{ post.title | replace: "SEM-CTRL", "<code>SEM-CTRL</code>" }}</p>
+      {% if post.authors %}
+        <p class="pub-list__authors">{{ post.authors | markdownify | remove: "<p>" | remove: "</p>" }}</p>
       {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
+      <p class="pub-list__venue"><em>{{ post.venue }}</em>{% if post.year %}, {{ post.year }}{% endif %}</p>
+      {% if post.note %}
+        <p class="pub-list__note">{{ post.note }}</p>
+      {% endif %}
+      {% if post.bibtexurl or post.htmlurl or post.paperurl or post.codeurl %}
+        <p class="pub-list__links">
+          {% if post.bibtexurl %}<a class="btn btn--inverse btn--small" href="{{ post.bibtexurl }}">BIB</a>{% endif %}
+          {% if post.htmlurl %}<a class="btn btn--inverse btn--small" href="{{ post.htmlurl }}">HTML</a>{% endif %}
+          {% if post.paperurl %}<a class="btn btn--inverse btn--small" href="{{ post.paperurl }}">PDF</a>{% endif %}
+          {% if post.codeurl %}<a class="btn btn--inverse btn--small" href="{{ post.codeurl }}">CODE</a>{% endif %}
+        </p>
+      {% endif %}
+    </li>
   {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
-
-
-
+</ul>

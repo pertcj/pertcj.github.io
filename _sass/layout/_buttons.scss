@@ -54,7 +54,8 @@
 
     &:hover {
       color: #fff !important;
-      border-color: var(--global-text-color-light);
+      background-color: var(--global-base-color);
+      border-color: var(--global-base-color);
     }
   }
 

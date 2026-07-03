@@ -1,0 +1,47 @@
+/* ==========================================================================
+    WASHED THEME - LIGHT VERSION
+    ========================================================================== */
+/* Color codes used for the theme */
+$primary-color              : #a8703c;
+$gray                       : #8a8478;
+$dark-gray                  : mix(#000, $gray, 40%);
+$darker-gray                : mix(#000, $gray, 60%);
+$light-gray                 : mix(#000, $gray, 25%);
+$lighter-gray               : mix(#fff, $gray, 75%);
+
+/* Color codes used for the site */
+$danger-color               : #ee5f5b;
+$info-color                 : #6f8fa8;
+$notice-color               : #8a8478;
+$success-color              : #6ba06b;
+$warning-color              : #b98a3f;
+
+/* Other basic settings for the template */
+$border-radius              : 4px;
+$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height             : 50px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+/* Washed light theme for the site */
+:root {
+    --global-base-color                 : #{$primary-color};
+    --global-bg-color                   : #f4efe3;
+    --global-footer-bg-color            : #ece5d5;
+    --global-border-color               : #{$lighter-gray};
+    --global-dark-border-color          : #d8cfba;
+    --global-code-background-color      : #ebe3d1;
+    --global-code-text-color            : #{$darker-gray};
+    --global-fig-caption-color          : mix(#f4efe3, #{$dark-gray}, 25%);
+    --global-link-color                 : #b25a3a;
+    --global-link-color-hover           : mix(#000, #b25a3a, 25%);
+    --global-link-color-visited         : mix(#fff, #b25a3a, 25%);
+    --global-masthead-link-color        : #{$dark-gray};
+    --global-masthead-link-color-hover  : mix(#000, #{$gray}, 25%);
+    --global-text-color                 : #3a362f;
+    --global-text-color-light           : #{$light-gray};
+    --global-thead-color                : #{$lighter-gray};
+}

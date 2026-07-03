@@ -1,0 +1,77 @@
+/* ==========================================================================
+   COMPACT PUBLICATION / TALK LIST
+   ========================================================================== */
+
+.pub-list {
+  margin: 1.5em 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pub-list__item {
+  padding: 1.4em 0;
+  border-bottom: 1px solid var(--global-border-color);
+
+  &:first-child {
+    padding-top: 0.5em;
+  }
+}
+
+.pub-list__title {
+  margin: 0 0 0.3em;
+  font-family: $sans-serif-narrow;
+  font-size: $type-size-4;
+  font-weight: 700;
+  color: var(--global-text-color);
+}
+
+.pub-list__authors {
+  margin: 0 0 0.3em;
+  font-size: $type-size-6;
+  color: var(--global-text-color);
+
+  a {
+    text-decoration: underline dotted;
+  }
+}
+
+.pub-list__venue {
+  margin: 0 0 0.3em;
+  font-size: $type-size-6;
+  color: var(--global-text-color-light);
+}
+
+.pub-list__note {
+  margin: 0 0 0.3em;
+  font-size: $type-size-6;
+  font-style: italic;
+  color: var(--global-base-color);
+}
+
+.pub-list__links {
+  margin: 0.6em 0 0;
+
+  .btn {
+    margin-right: 0.4em;
+    margin-bottom: 0.4em;
+    padding: 0.35em 0.75em;
+    font-size: $type-size-8;
+    letter-spacing: 0.05em;
+  }
+}
+
+.pub-list__title code {
+  font-size: 0.85em;
+}
+
+/* ==========================================================================
+   LOWERCASE SECTION SUBTITLES
+   ========================================================================== */
+
+.page__title,
+.archive h1,
+.archive h2,
+.page__content h1,
+.page__content h2 {
+  text-transform: lowercase;
+}
