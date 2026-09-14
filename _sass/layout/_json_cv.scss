@@ -62,6 +62,10 @@
   margin-bottom: 2rem;
 }
 
+.archive h2.cv-section-heading {
+  text-transform: capitalize !important;
+}
+
 .cv-section h2 {
   border-bottom: 1px solid var(--global-border-color);
   padding-bottom: 0.5rem;
@@ -82,6 +86,22 @@
   margin-bottom: 1.5rem;
 }
 
+.cv-item-top-block {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cv-item-body {
+  flex: 1;
+}
+
+.cv-item-image {
+  width: 64px;
+  max-height: 64px;
+  object-fit: contain;
+}
+
 .cv-list {
   list-style-type: none;
 }
@@ -95,6 +115,7 @@
 .cv-item-title {
   font-weight: bold;
   font-size: 1.1rem;
+  text-transform: capitalize;
 }
 
 .cv-item-date {
@@ -228,6 +249,10 @@
   
   .cv-section h2 {
     border-bottom-color: var(--global-border-color);
+  }
+
+  .cv-item-image {
+    print-color-adjust: exact;
   }
   
   .cv-skill-keyword,

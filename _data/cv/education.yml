@@ -1,0 +1,23 @@
+- degree: PhD, Doctoral Teaching Programme in Computing
+  uni: Imperial College London
+  year: 2022 &mdash; Present
+  image: /images/new_imperial_logo.png
+  summary: Supervised by Prof. Alessandra Russo and Dr. Dalal Alrajeh. Research focus on scalable formal verification using machine learning.
+
+- degree: MSc, Scientific Computing and Data Analysis
+  uni: Durham University
+  year: 2021 &mdash; 2022
+  image: /images/durham.webp
+  awards:
+    - award: Distinction
+    - award: Obtained highest average mark for Scientific Computing and Data Analysis
+    - award: Awarded Postgraduate Student Support Scholarship
+  summary: |
+    Specialised in Financial Mathematics. Thesis title&#58; "On the Theory of Denoising Score Matching within Score-Based Diffusion Models"
+
+- degree: BSc (Hons), Mathematics and Physics
+  uni: Durham University
+  year: 2018 &mdash; 2021
+  image: /images/durham.webp
+  awards:
+    - award: First Class Honours

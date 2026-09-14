@@ -48,6 +48,25 @@
   color: var(--global-base-color);
 }
 
+.pub-list__abstract {
+  margin: 0.75em 0 0;
+  font-size: $type-size-6;
+
+  summary {
+    cursor: pointer;
+    color: var(--global-link-color);
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0.75em 0 0;
+  }
+}
+
+.pub-list__abstract-toggle {
+  margin-top: 1em;
+}
+
 .pub-list__links {
   margin: 0.6em 0 0;
 
@@ -62,16 +81,4 @@
 
 .pub-list__title code {
   font-size: 0.85em;
-}
-
-/* ==========================================================================
-   LOWERCASE SECTION SUBTITLES
-   ========================================================================== */
-
-.page__title,
-.archive h1,
-.archive h2,
-.page__content h1,
-.page__content h2 {
-  text-transform: lowercase;
 }

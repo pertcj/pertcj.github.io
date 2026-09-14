@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "cv"
+title: "CV"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -9,85 +9,202 @@ redirect_from:
 
 {% include base_path %}
 
-[Download full CV as PDF](/files/Mohammad_Albinhassan_CV.pdf){: .btn .btn--primary}
+{% assign cv_experience = site.data.cv.experience %}
+{% assign cv_education = site.data.cv.education %}
+<!-- {% assign cv_projects = site.data.cv.projects %} -->
+{% assign cv_skills = site.data.cv.skills %}
+<!-- {% assign cv_recognitions = site.data.cv.recognitions %} -->
+{% assign cv_associations = site.data.cv.associations %}
+<!-- {% assign cv_interests = site.data.cv.interests %} -->
+<!-- {% assign cv_links = site.data.cv.links %} -->
 
-# Education
+{% if cv_education and cv_education.size > 0 %}
+<h2 class="cv-section-heading">Education</h2>
 
-- PhD in Computing Research, Imperial College London, October 2023 &ndash; Present
-  - Advisors: Professor Alessandra Russo and Dr Pranava Madhyastha
-- MSc in Artificial Intelligence, King's College London, September 2022 &ndash; August 2023
-  - Distinction (83% overall)
-- BSc in Computer Science, King's College London, September 2019 &ndash; June 2022
-  - First-Class Honours (86% overall)
+<div class="cv-section">
+  <ul class="cv-list">
+    {% for education in cv_education %}
+    <li class="cv-item">
+      <div class="cv-item-top-block">
+        {% if education.image %}
+        <img src="{{ base_path }}{{ education.image }}" alt="{{ education.image_alt | default: education.uni }}" class="cv-item-image">
+        {% endif %}
+        <div class="cv-item-body">
+          <div class="cv-item-header">
+            <div class="cv-item-title">{{ education.uni }}</div>
+            <div class="cv-item-date">{{ education.year }}</div>
+          </div>
+          <div class="cv-item-subtitle">{{ education.degree }}</div>
+        </div>
+      </div>
+      {% if education.award %}
+      <div class="cv-item-summary">{{ education.award | markdownify }}</div>
+      {% endif %}
+      {% if education.awards and education.awards.size > 0 %}
+      <ul class="cv-item-highlights">
+        {% for award in education.awards %}
+        <li>{{ award.award }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% if education.summary %}
+      <div class="cv-item-summary">{{ education.summary | markdownify }}</div>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
 
-# publications
+{% if cv_experience and cv_experience.size > 0 %}
+<h2 class="cv-section-heading">Experience</h2>
 
-  <ul>{% assign cv_pubs = site.publications | sort: "order" %}{% for post in cv_pubs %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+<div class="cv-section">
+  <ul class="cv-list">
+    {% for job in cv_experience %}
+    <li class="cv-item">
+      <div class="cv-item-top-block">
+        {% if job.image %}
+        <img src="{{ base_path }}{{ job.image }}" alt="{{ job.image_alt | default: job.company }}" class="cv-item-image">
+        {% endif %}
+        <div class="cv-item-body">
+          <div class="cv-item-header">
+            <div class="cv-item-title">{{ job.company }}</div>
+            <div class="cv-item-date">{{ job.duration }}</div>
+          </div>
+          <div class="cv-item-subtitle">{{ job.position }}</div>
+        </div>
+      </div>
+      {% if job.summary %}
+      <div class="cv-item-summary">{{ job.summary | markdownify }}</div>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
 
-# Industry Experience
+<!--
+{% if cv_projects and cv_projects.size > 0 %}
+<h2 class="cv-section-heading">Projects</h2>
 
-- October 2025 &ndash; January 2026: Research Scientist
-  - Google DeepMind, London, UK
-  - Contributed to frontier model research and development as a research scientist embedded with the Gemini team, including work on DeepThink, spanning model capabilities and the design of new evaluation methodologies
-  - Co-led two research projects bringing together Google DeepMind researchers and Imperial faculty and graduate students
+<div class="cv-section">
+  <ul class="cv-list">
+    {% for project in cv_projects %}
+    <li class="cv-item">
+      <div class="cv-item-top-block">
+        {% if project.image %}
+        <img src="{{ base_path }}{{ project.image }}" alt="{{ project.image_alt | default: project.project }}" class="cv-item-image">
+        {% endif %}
+        <div class="cv-item-body">
+          <div class="cv-item-header">
+            <div class="cv-item-title">
+              {% if project.url %}<a href="{{ project.url }}">{{ project.project }}</a>{% else %}{{ project.project }}{% endif %}
+            </div>
+            <div class="cv-item-date">{{ project.duration }}</div>
+          </div>
+          <div class="cv-item-subtitle">{{ project.role }}</div>
+        </div>
+      </div>
+      {% if project.description %}
+      <div class="cv-item-summary">{{ project.description | markdownify }}</div>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %} -->
 
-- June 2024 &ndash; Present: Research Assistant
-  - Imperial College London, London, UK
-  - Tech lead on an Imperial Policy Forum project with DSIT and the AI Security Institute (AISI), focused on LLM agents
-  - Build and lead research collaborations with chemists and scientists for scientific discovery, spanning molecular and drug design, multi-step retrosynthesis, and life sciences
-  - Establish departmental research collaborations, including the Thomson Reuters Lab at Imperial College London
-  - Supervise internal and external research students and monitor research projects and tool development
+{% if cv_skills and cv_skills.size > 0 %}
+<h2 class="cv-section-heading">Skills</h2>
 
-- June 2022 &ndash; August 2022: Software Engineer
-  - American Express, London, UK
-  - Full-stack software engineer in the modern accounts receivable team handling credit card transactions
+<div class="cv-section">
+  {% for skill in cv_skills %}
+    {% if skill.keywords %}
+    <div class="cv-item-summary">{{ skill.keywords | markdownify }}</div>
+    {% endif %}
+  {% endfor %}
+</div>
+{% endif %}
+<!--
+{% if cv_recognitions and cv_recognitions.size > 0 %}
+<h2 class="cv-section-heading">Recognition</h2>
 
-- June 2021 &ndash; September 2021: Software Engineer
-  - Intuit, London, UK
-  - Developed integral features for the QuickBooks Payroll product, used by millions of users, in an agile scrum team
+<div class="cv-section">
+  <ul class="cv-list">
+    {% for recognition in cv_recognitions %}
+    <li class="cv-item">
+      <div class="cv-item-top-block">
+        {% if recognition.image %}
+        <img src="{{ base_path }}{{ recognition.image }}" alt="{{ recognition.image_alt | default: recognition.award }}" class="cv-item-image">
+        {% endif %}
+        <div class="cv-item-body">
+          <div class="cv-item-header">
+            <div class="cv-item-title">{{ recognition.award }}</div>
+            <div class="cv-item-date">{{ recognition.year }}</div>
+          </div>
+          <div class="cv-item-subtitle">{{ recognition.organization }}</div>
+        </div>
+      </div>
+      {% if recognition.summary %}
+      <div class="cv-item-summary">{{ recognition.summary | markdownify }}</div>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %} -->
 
-# Research Experience
+{% if cv_associations and cv_associations.size > 0 %}
+<h2 class="cv-section-heading">Associations</h2>
 
-- PhD Research, Imperial College London
-  - Inducing control in LLMs at both the "reasoning" and "generation" level, bolstering reasoning capabilities and ensuring the validity of output generations with neuro-symbolic learning (System 2 thinking)
-  - Investigating post-training mechanisms for improving reasoning in LLMs, guiding models toward more deliberate and correct reasoning trajectories
-  - Conducting experiments on tasks including code generation, agent planning, semantic parsing, math, and logical problems
-  - Broader interests: foundation models, reinforcement learning, neuro-symbolic learning, and reasoning in neural networks
+<div class="cv-section">
+  <ul class="cv-list">
+    {% for association in cv_associations %}
+    <li class="cv-item">
+      <div class="cv-item-top-block">
+        {% if association.image %}
+        <img src="{{ base_path }}{{ association.image }}" alt="{{ association.image_alt | default: association.organization }}" class="cv-item-image">
+        {% endif %}
+        <div class="cv-item-body">
+          <div class="cv-item-header">
+            <div class="cv-item-title">
+              {% if association.url %}<a href="{{ association.url }}">{{ association.organization }}</a>{% else %}{{ association.organization }}{% endif %}
+            </div>
+            <div class="cv-item-date">{{ association.year }}</div>
+          </div>
+          <div class="cv-item-subtitle">{{ association.role }}</div>
+        </div>
+      </div>
+      {% if association.summary %}
+      <div class="cv-item-summary">{{ association.summary | markdownify }}</div>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+<!--
+{% if cv_interests and cv_interests.size > 0 %}
+<h2 class="cv-section-heading">Outside Interests</h2>
 
-- Transformer-Based Online Reinforcement Learning with a Shared Global Workspace, King's College London (Advisor: Dr Yali Du)
-  - Developed Deep Reinforcement Learning (DRL) agents using novel transformer-based architectures inspired by cognitive neuroscience (global workspace theory), outperforming state-of-the-art online DRL agents
-  - Applied to discrete, continuous, lifelong, and meta-learning reinforcement learning domains and environments
+<div class="cv-section">
+  <ul class="cv-item-highlights">
+    {% for interest in cv_interests %}
+    <li>{{ interest.description }}</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
 
-# Invited talks
+{% if cv_links and cv_links.size > 0 %}
+<h2 class="cv-section-heading">Additional Links</h2>
 
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-
-# Student Supervision
-
-- Tim Qi, MEng student, Imperial College London
-  - Project on reasoning models
-- Yuming Feng, MSc student, Johns Hopkins University
-  - Project on embodied agents and multi-modal models
-
-# Service
-
-- Conference reviewing: ACL, IJCAI, NeSy, and ICML, 2023 &ndash; Present
-- HPC Administrator, 2025 &ndash; Present
-  - Manage Imperial GPU clusters, supporting students and faculty
-
-# Funding and Awards
-
-- Academic Scholarship (Top 1%), Imperial College London, 2023
-- Academic Scholarship (Top 1%), King's College London, 2022
-- Undergraduate Informatics Prize, King's College London, 2022
-  - Award for best academic performance in the Department of Informatics
-
-# Technical Skills
-
-- **Languages**: Python, Java, C++, JavaScript, SQL
-- **AI and ML**: PyTorch, HuggingFace, vLLM, verl, LangChain, Weights & Biases, distributed training (multi-GPU, multi-node)
-- **Symbolic and Reasoning**: Answer Set Programming (ASP), Prolog, RDKit
+<div class="cv-section">
+  <ul class="cv-item-highlights">
+    {% for link in cv_links %}
+    <li><a href="{{ link.url }}">{{ link.description }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %} -->

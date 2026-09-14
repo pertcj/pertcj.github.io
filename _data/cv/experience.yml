@@ -1,0 +1,35 @@
+# Jobs
+# Lecturer
+- company: Imperial College London
+  position: Lecturer, Symbolic Reasoning
+  duration: 2023 &mdash; 2026
+  image: /images/new_imperial_logo.png
+  summary: Delivered undergraduate computing course lectures and developed coursework focused on SMT solving using Z3Py. Responsible for exam design, student communication, and ensuring high-quality educational outcomes.
+
+# Software Engineering Intern
+- company: Epic Games
+  position: Research Engineer Intern
+  duration: September 2024 &mdash; February 2025
+  image: /images/Epic_Games_logo.svg
+  summary: 6 month internship developing scalable automatic labeling methods with large language models (LLMs) and vision-language models (VLMs) for improving applications like search and content moderation. Generated large, high-quality image-text dataset for evaluating search retrieval performance. Learned how to perform LLM inference on AWS Bedrock and locally. Applied my work to tackle real-world problems; for improving the search experience across Epic's asset sharing platforms.
+
+# MEng Project Supervisor
+- company: Imperial College London
+  position: MEng Project Supervisor
+  duration: 2023 &mdash; 2024
+  image: /images/new_imperial_logo.png
+  summary: Supervised undergraduate thesis project on "Neurosymbolic learning of explainable commonsense knowledge using LLMs." Provided technical guidance and ensured timely delivery of high-quality research outcomes combining symbolic reasoning with modern AI approaches.
+
+# Course Support Lead
+- company: Imperial College London
+  position: Course Support Lead, Various
+  duration: 2022 &mdash; 2023
+  image: /images/new_imperial_logo.png
+  summary: For Computational Techniques & Symbolic Reasoning. Developed and deployed an automated grading system for computational coursework. Resolved technical implementation issues and successfully launched the platform, improving assessment efficiency and student feedback processes.
+
+# Year in Industry Student
+- company: Procter & Gamble
+  position: R&D Intern
+  duration: 2017 &mdash; 2018
+  image: /images/p&g_logo.svg
+  summary: Created statistical models for predicting laundry powder properties and developed specialised image analysis tools for MicroCT powder imaging using ImageJ. Applied data science techniques to solve manufacturing and quality control challenges.

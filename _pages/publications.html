@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "publications"
+title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
@@ -8,8 +8,10 @@ author_profile: true
 {% include base_path %}
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+  <div class="wordwrap">You can also view my Google Scholar <a href="{{site.author.googlescholar}}">here</a>.</div>
 {% endif %}
+
+<button type="button" class="btn btn--inverse btn--small pub-list__abstract-toggle" id="toggle-publication-abstracts">Show all abstracts</button>
 
 <ul class="pub-list">
   {% assign pubs = site.publications | sort: "order" %}
@@ -23,6 +25,12 @@ author_profile: true
       {% if post.note %}
         <p class="pub-list__note">{{ post.note }}</p>
       {% endif %}
+      {% if post.abstract %}
+        <details class="pub-list__abstract">
+          <summary>Abstract</summary>
+          <div itemprop="abstract">{{ post.abstract | markdownify }}</div>
+        </details>
+      {% endif %}
       {% if post.bibtexurl or post.htmlurl or post.paperurl or post.codeurl %}
         <p class="pub-list__links">
           {% if post.bibtexurl %}<a class="btn btn--inverse btn--small" href="{{ post.bibtexurl }}">BIB</a>{% endif %}
@@ -34,3 +42,26 @@ author_profile: true
     </li>
   {% endfor %}
 </ul>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("toggle-publication-abstracts");
+    const abstracts = document.querySelectorAll(".pub-list__abstract");
+
+    if (!abstracts.length) {
+      toggle.hidden = true;
+      return;
+    }
+
+    toggle.addEventListener("click", function () {
+      const showAbstracts = toggle.dataset.expanded !== "true";
+
+      abstracts.forEach(function (abstract) {
+        abstract.open = showAbstracts;
+      });
+
+      toggle.dataset.expanded = showAbstracts;
+      toggle.textContent = showAbstracts ? "Hide all abstracts" : "Show all abstracts";
+    });
+  });
+</script>

@@ -7,51 +7,52 @@
 # server process.
 
 # Basic Site Settings
-locale: "en-US"
-site_theme: "washed" # The available themes options are "default", "air", "sunrise", "mint", "dirt", "contrast", and "washed"
-title: "Mohammad Albinhassan"
+locale: "en-GB"
+site_theme: "charles" # Built-in themes: "default", "air", "sunrise", "mint", "dirt", "contrast", and "washed"; custom theme: "charles"
+title: "Charles Pert"
 title_separator: "-"
-name: &name "Mohammad Albinhassan"
-description: &description "Mohammad Albinhassan's academic portfolio" # Update this with a general description of your site, this is the default if not overridden by a page
+name: &name "Charles Pert"
+description: &description # Update this with a general description of your site, this is the default if not overridden by a page
 url:
-  https://mohammadabh.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
+  https://cjpert.com # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
   # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl: "" # the subpath of your site, e.g. "/blog"
-repository: "mohammadabh/mohammadabh.github.io"
+repository: "pertcj/pertcj.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar: "mohammad-profile.jpg"
-  name: "Mohammad Albinhassan"
+  avatar: "avatar.jpg"
+  name: "Charles Pert"
   pronouns: # example: "she/her"
-  bio: "PhD researcher on controlled inference, post-training, and reasoning in LLMs"
+  bio: "PhD student and Teaching Scholar in the Department of Computing, Imperial College London"
   location: "London, UK"
   employer: "Imperial College London"
   uri: # URL
-  email: "m.albinhassan23@imperial.ac.uk"
+  email: "first.last@imperial.ac.uk"
 
   # Academic websites
   academia: # URL
   arxiv: # URL - Update with the correct link to your profile
-  googlescholar: "https://scholar.google.com/citations?user=ZEnxWvUAAAAJ&hl=en&oi=ao"
+  googlescholar: "https://scholar.google.com/citations?user=2iiu7ucAAAAJ"
   inspire-hep: # URL
   impactstory: # URL
-  orcid: # URL - add your ORCID here if you have one
+  orcid: 0009-0009-9790-6362
   semantic: # URL
   ssrn: # URL
   pubmed: # URL
   researchgate: # URL
   scopus: # URL
   zotero: # URL
+  dblp: https://dblp.org/pid/379/8000.html
 
   # Repositories and software development
   bitbucket: # Username - Update with your username on the site
   codepen: # Username
   dribbble: # Username
-  github: "mohammadabh"
+  github: "pertcj"
   kaggle: # Username
   stackoverflow: # User number or user number and name (i.e., use "1" or "1/jeff-atwood")
 
@@ -66,7 +67,7 @@ author:
   keybase: # Username
   instagram: # Username
   lastfm: # Username
-  linkedin: "mohammad-albinhassan"
+  linkedin: "charlespert"
   mastodon: # URL
   medium: # URL
   pinterest: # Username
@@ -90,6 +91,10 @@ publication_category:
     title: "Journal Articles"
   conferences:
     title: "Conference Papers"
+  workshops:
+    title: "Workshop Papers"
+  preprints:
+    title: "Preprints"
 
 # Site Settings
 teaser: # filename of teaser fallback teaser image placed in /images/ for social media previews
