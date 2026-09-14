@@ -14,7 +14,7 @@ author_profile: true
 <button type="button" class="btn btn--inverse btn--small pub-list__abstract-toggle" id="toggle-publication-abstracts">Show all abstracts</button>
 
 <ul class="pub-list">
-  {% assign pubs = site.publications | sort: "order" %}
+  {% assign pubs = site.publications | sort: "date" | reverse %}
   {% for post in pubs %}
     <li class="pub-list__item">
       <p class="pub-list__title">{{ post.title | replace: "SEM-CTRL", "<code>SEM-CTRL</code>" }}</p>
